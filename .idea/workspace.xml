@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="982a1c4e-7d4d-4b65-b0af-f9442b19df04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DTOs/ProductListDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OfficeList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProductList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DTOs/OfficeListDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/XMLBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/XMLBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OfficeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OfficeList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,12 +75,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/OfficeList.java</url>
-          <line>43</line>
+          <line>50</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/OfficeList.java</url>
-          <line>55</line>
+          <line>57</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -94,6 +92,11 @@
           <url>file://$PROJECT_DIR$/src/ProductList.java</url>
           <line>99</line>
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/OfficeList.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

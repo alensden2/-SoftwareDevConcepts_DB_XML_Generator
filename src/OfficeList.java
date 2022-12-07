@@ -1,4 +1,6 @@
 import DTOs.CustomerInformationDTO;
+import DTOs.OfficeListDTO;
+import DTOs.ProductListDTO;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -6,6 +8,8 @@ import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.ResultSet;
 import java.sql.DriverManager;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 public class OfficeList {
@@ -13,6 +17,8 @@ public class OfficeList {
     String username = "";
     String password = "";
     String propertyFilename = "me.prop";
+    List<String> officeCities = new ArrayList<>();
+    List<OfficeListDTO> officeListDTOList = new ArrayList<>();
 
     OfficeList() {
 
@@ -29,36 +35,71 @@ public class OfficeList {
         }
     }
 
-    void testConnection(){
-        Connection connect = null;
-        Statement statement = null;
-        ResultSet resultSet = null;
+    List<OfficeListDTO> officeList(String startDate, String endDate){
+        Connection connectForCities = null;
+        Statement statementForCities = null;
+        ResultSet resultSetForCities = null;
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            connect = DriverManager.getConnection("jdbc:mysql://db.cs.dal.ca:3306?serverTimezone=UTC&useSSL=false", username, password);
-            statement = connect.createStatement();
-            statement.execute("use alen;");
-            String stat = "call `alen`.`GET_CUSTOMER_LIST`('2003-02-12', '2003-02-19')";
-            resultSet = statement.executeQuery(" select productName, quantityOrdered, customerName, orderDate, productLine from customers \n" +
-                    "\tjoin orders on customers.customerNumber = orders.customerNumber\n" +
-                    "    join orderdetails on orderdetails.orderNumber = orders.orderNumber\n" +
-                    "    join products on products.productCode = orderdetails.productCode\n" +
-                    "\t\twhere orders.orderDate >= '2003-02-12' and orders.orderDate <= '2003-02-19'\n" +
-                    "        and products.productName = '1980s Black Hawk Helicopter'\n" +
-                    "        order by productName;");
+            connectForCities = DriverManager.getConnection("jdbc:mysql://db.cs.dal.ca:3306?serverTimezone=UTC&useSSL=false", username, password);
+            statementForCities = connectForCities.createStatement();
+            statementForCities.execute("use alen;");
 
-            while (resultSet.next()) {
-                System.out.println(resultSet.getString(1));
+            String storedProcForNamesOfCity = "call `alen`.`GET_OFFICE_LIST_NAMES`(" + startDate + ", " + endDate + ")";
+            resultSetForCities = statementForCities.executeQuery(storedProcForNamesOfCity);
+
+            while (resultSetForCities.next()) {
+                String cityName = resultSetForCities.getString("city");
+                officeCities.add(cityName);
             }
 
-            resultSet.close();
-            statement.close();
-            connect.close();
+            resultSetForCities.close();
+            statementForCities.close();
+            connectForCities.close();
+
+            // for the detailed list
+            Connection connectForOfficeList = null;
+            Statement statementForOfficeList = null;
+            ResultSet resultSetForOfficeList = null;
+            connectForOfficeList = DriverManager.getConnection("jdbc:mysql://db.cs.dal.ca:3306?serverTimezone=UTC&useSSL=false",
+                    username, password);
+            statementForOfficeList= connectForOfficeList.createStatement();
+            statementForOfficeList.execute("use alen;");
+            for(int i = 0; i<officeCities.size(); i++){
+                String currentCityName = "\""+officeCities.get(i)+"\"";
+                String storedProcedureForOfficeList = "call `alen`.`GET_OFFICE_LIST_CITES_CUSTOMERS`(" + startDate + ", " + endDate + ","+currentCityName+")";
+                resultSetForOfficeList = statementForOfficeList.executeQuery(storedProcedureForOfficeList);
+
+                while (resultSetForOfficeList.next()) {
+
+                    String custSalesVal = resultSetForOfficeList.getString("customerSalesValue");
+                    String territory =  resultSetForOfficeList.getString("territory");
+                    String city = resultSetForOfficeList.getString("city");
+                    String custName = resultSetForOfficeList.getString("customerName");
+                    String employeeCount = resultSetForOfficeList.getString("employeeCount");
+
+                    OfficeListDTO officeListDTO = new OfficeListDTO(custSalesVal,territory,city,custName,employeeCount);
+                    officeListDTOList.add(officeListDTO);
+                }
+            }
+
+            resultSetForOfficeList.close();
+            statementForOfficeList.close();
+            connectForOfficeList.close();
+
         } catch (Exception e) {
             System.out.println("Connection failed");
             System.out.println(e.getMessage());
         }
+        return officeListDTOList;
+    }
+
+    List<String> testCon(){
+        return officeCities;
+    }
+    List<OfficeListDTO> testCon2(){
+        return officeListDTOList;
     }
 }

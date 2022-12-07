@@ -6,9 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="982a1c4e-7d4d-4b65-b0af-f9442b19df04" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/src/DTOs/OfficeListDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_0_31.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_0_31.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomerData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OfficeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OfficeList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProductList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProductList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/XMLBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/XMLBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +45,8 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "/home/cynos/IdeaProjects/mysql-connector-j-8.0.31/mysql-connector-j-8.0.31.jar",
     "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RunManager">
@@ -75,33 +79,33 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/OfficeList.java</url>
-          <line>50</line>
+          <line>77</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/OfficeList.java</url>
-          <line>57</line>
+          <line>89</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ProductList.java</url>
-          <line>105</line>
+          <line>136</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ProductList.java</url>
-          <line>99</line>
+          <line>130</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/OfficeList.java</url>
-          <line>70</line>
+          <line>105</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
-      <inline-watch fileUrl="file://$PROJECT_DIR$/src/ProductList.java" line="17">
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/ProductList.java" line="26">
         <watch expression="((ProductList)this).productNames" custom="ProductList" />
       </inline-watch>
     </watches-manager>

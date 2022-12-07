@@ -1,3 +1,12 @@
+
+/**
+ * Software Development Concepts
+ * 
+ * @author Alen Santosh John
+ * @author B00930528
+ * 
+ *     
+ */
 import DTOs.CustomerInformationDTO;
 
 import java.io.FileInputStream;
@@ -11,13 +20,17 @@ import java.util.List;
 import java.util.Properties;
 
 public class CustomerData {
-    // reference from lab 9
+    // reference for connection from CSCI 3901 Lab work
     Properties identity = new Properties();
     List<CustomerInformationDTO> customerListDTO = new ArrayList<>();
     String username = "";
     String password = "";
     String propertyFilename = "me.prop";
 
+    /**
+     * DB Connection configuration, User and password
+     * Set by constructor
+     */
     CustomerData() {
         // user and pass for the connection
         try {
@@ -32,10 +45,15 @@ public class CustomerData {
         }
     }
 
-    // get the query outputs
+    /**
+     *
+     * @param startDate
+     * @param endDate
+     * @return
+     *
+     *         get the customer list using the stored procedure
+     */
     List<CustomerInformationDTO> customerList(String startDate, String endDate) {
-        // Do the actual database work now
-
         Connection connect = null;
         Statement statement = null;
         ResultSet resultSet = null;
@@ -47,6 +65,9 @@ public class CustomerData {
                     username, password);
             statement = connect.createStatement();
             statement.execute("use alen;");
+            /*
+             * Stored procedure for getting the customer list
+             */
             String stat = "call `alen`.`GET_CUSTOMER_LIST`(" + startDate + ", " + endDate + ")";
             resultSet = statement.executeQuery(stat);
 
@@ -57,15 +78,19 @@ public class CustomerData {
                 String country = resultSet.getString("country");
                 String city = resultSet.getString("city");
                 String postalCode = resultSet.getString("postalCode");
-                String orderValue = getOrderValue(startDate, endDate);
+                /*
+                 * get order value from a different query
+                 */
+                String orderValue = getOrderValue(startDate, endDate, customerName);
                 if (address1 == null) {
-                    address1 = ""; //changing null to "" to avoid nullAlen
+                    address1 = ""; // changing null to "" to avoid nullAlen
                 } else if (address2 == null) {
                     address2 = "";
                 }
                 String streetAddress = address1 + address2;
                 /* insert for total order outstanding */
-                CustomerInformationDTO customerInformationDTO = new CustomerInformationDTO(customerName, streetAddress, city, country, postalCode, orderValue,orderValue);
+                CustomerInformationDTO customerInformationDTO = new CustomerInformationDTO(customerName, streetAddress,
+                        city, country, postalCode, orderValue, orderValue);
                 customerListDTO.add(customerInformationDTO);
             }
 
@@ -79,7 +104,7 @@ public class CustomerData {
         return customerListDTO;
     }
 
-    String getOrderValue(String startDate, String endDate) {
+    String getOrderValue(String startDate, String endDate, String custName) {
         Connection connect = null;
         Statement statement = null;
         ResultSet orderValue = null;
@@ -91,8 +116,11 @@ public class CustomerData {
                     username, password);
             statement = connect.createStatement();
             statement.execute("use alen;");
+            /*
+             * Get the order value from the stored procedure
+             */
             orderValue = statement.executeQuery("call `alen`.`GET_CUSTOMER_ORDER_VALUE_FOR_TIME`(" + startDate + ", "
-                    + endDate + ",'Rovelli Gifts')");
+                    + endDate + "," + "\"" + custName + "\"" + ")");
 
             while (orderValue.next()) {
                 orderValueFromDB = orderValue.getString("orderValue");
@@ -106,5 +134,9 @@ public class CustomerData {
             System.out.println(e.getMessage());
         }
         return orderValueFromDB;
+    }
+
+    List<CustomerInformationDTO> test(){
+        return customerListDTO;
     }
 }

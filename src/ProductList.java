@@ -1,3 +1,12 @@
+
+/**
+ * Software Development Concepts
+ * 
+ * @author Alen Santosh John
+ * @author B00930528
+ * 
+ *     
+ */
 import DTOs.ProductListDTO;
 
 import java.io.FileInputStream;
@@ -32,26 +41,34 @@ public class ProductList {
         }
     }
 
+    /**
+     * 
+     * @param startDate
+     * @param endDate
+     * @return
+     * 
+     *         Get all the product names from the stored procedure
+     */
     List<ProductListDTO> productList(String startDate, String endDate) {
         // for finding the list o products
+        // reference for connection from CSCI 3901 Lab work
+        // user and pass for the connection
+
         Connection connectForProdNames = null;
         Statement statementForProdNames = null;
         ResultSet resultSetForProdNames = null;
-
-
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             // for prod names
-            connectForProdNames = DriverManager.getConnection("jdbc:mysql://db.cs.dal.ca:3306?serverTimezone=UTC&useSSL=false",
+            connectForProdNames = DriverManager.getConnection(
+                    "jdbc:mysql://db.cs.dal.ca:3306?serverTimezone=UTC&useSSL=false",
                     username, password);
             statementForProdNames = connectForProdNames.createStatement();
             statementForProdNames.execute("use alen;");
 
-
             String storedProcedureNames = "call `alen`.`GET_PRODUCT_NAMES`(" + startDate + ", " + endDate + ")";
-
 
             // sp for finding prod names
             resultSetForProdNames = statementForProdNames.executeQuery(storedProcedureNames);
@@ -66,37 +83,51 @@ public class ProductList {
             statementForProdNames.close();
             connectForProdNames.close();
 
-            // for prod list
-            // for finding the product list details
+            /**
+             * for prod list
+             * for finding the product list details
+             */
+
             Connection connectForProdList = null;
             Statement statementForProdList = null;
             ResultSet resultSetForProdList = null;
-            connectForProdList = DriverManager.getConnection("jdbc:mysql://db.cs.dal.ca:3306?serverTimezone=UTC&useSSL=false",
+            connectForProdList = DriverManager.getConnection(
+                    "jdbc:mysql://db.cs.dal.ca:3306?serverTimezone=UTC&useSSL=false",
                     username, password);
-            statementForProdList= connectForProdList.createStatement();
+            statementForProdList = connectForProdList.createStatement();
             statementForProdList.execute("use alen;");
-            for(int i = 0; i<productNames.size(); i++){
+
+            /*
+             * Find the expanded list for all the products
+             * loops through all the prod names that were stored previously
+             * the name is passed to the where clause
+             */
+            for (int i = 0; i < productNames.size(); i++) {
                 String productName = productNames.get(i);
 
+                /*
+                 * The following query is for all product list
+                 */
                 resultSetForProdList = statementForProdList.executeQuery(
                         " select productName, quantityOrdered, customerName, orderDate, productLine from customers \n" +
                                 "\tjoin orders on customers.customerNumber = orders.customerNumber\n" +
                                 "    join orderdetails on orderdetails.orderNumber = orders.orderNumber\n" +
                                 "    join products on products.productCode = orderdetails.productCode\n" +
-                                "\t\twhere orders.orderDate >= "+startDate+" and orders.orderDate <= "+endDate+"\n" +
-                                "        and products.productName = \""+ productName +"\"\n" +
-                                "        order by productName;"
-                );
+                                "\t\twhere orders.orderDate >= " + startDate + " and orders.orderDate <= " + endDate
+                                + "\n" +
+                                "        and products.productName = \"" + productName + "\"\n" +
+                                "        order by productName;");
 
                 while (resultSetForProdList.next()) {
 
                     String produceName = resultSetForProdList.getString("productName");
-                    String quantityOrdered =  resultSetForProdList.getString("quantityOrdered");
-                    String customerName =  resultSetForProdList.getString("customerName");
-                    String orderDate =  resultSetForProdList.getString("orderDate");
-                    String productLine =  resultSetForProdList.getString("productLine");
+                    String quantityOrdered = resultSetForProdList.getString("quantityOrdered");
+                    String customerName = resultSetForProdList.getString("customerName");
+                    String orderDate = resultSetForProdList.getString("orderDate");
+                    String productLine = resultSetForProdList.getString("productLine");
 
-                    ProductListDTO productListDTO1 = new ProductListDTO(produceName, quantityOrdered, customerName, orderDate, productLine);
+                    ProductListDTO productListDTO1 = new ProductListDTO(produceName, quantityOrdered, customerName,
+                            orderDate, productLine);
                     productListDTO.add(productListDTO1);
                 }
             }

@@ -1,3 +1,4 @@
+
 /**
  * Software Development Concepts
  *
@@ -12,7 +13,6 @@ import DTOs.ProductListDTO;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -36,10 +36,18 @@ public class XMLBuilder {
     List<ProductListDTO> productListFromDB = new ArrayList<>();
     List<OfficeListDTO> officeListFromDB = new ArrayList<>();
 
+    /**
+     * Generates the XML Document
+     * 
+     * @param startDate
+     * @param endDate
+     * @param xmlName
+     */
     void generateReports(String startDate, String endDate, String xmlName) {
         /**
-         * reference from - https://examples.javacodegeeks.com/core-java/xml/parsers/documentbuilderfactory/create-xml-file-in-java-using-dom-parser-example/
-         * */
+         * reference from -
+         * https://examples.javacodegeeks.com/core-java/xml/parsers/documentbuilderfactory/create-xml-file-in-java-using-dom-parser-example/
+         */
 
         customerListFromDB = customerData.customerList(startDate, endDate);
         productListFromDB = productList.productList(startDate, endDate);
@@ -78,6 +86,7 @@ public class XMLBuilder {
 
             Element customerList = document.createElement("customer_list");
 
+            // Generates the Customer List
             for (int i = 0; i < customerListFromDB.size(); i++) {
                 Element customer = document.createElement("customer");
                 Element customerName = document.createElement("customer_name");
@@ -97,7 +106,8 @@ public class XMLBuilder {
             root.appendChild(customerList);
             Element productList = document.createElement("product_list");
 
-            for(int i = 0; i<productListFromDB.size(); i++){
+            // Generated the product list
+            for (int i = 0; i < productListFromDB.size(); i++) {
                 Element prdName = document.createElement("product_name");
                 Element prdLine = document.createElement("product_line_name");
                 Element introDate = document.createElement("introduction_date");

@@ -9,8 +9,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        /**
+         * Takes the user input and calls the xml builder
+         */
         XMLBuilder xmlBuilder = new XMLBuilder();
-
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Start date");

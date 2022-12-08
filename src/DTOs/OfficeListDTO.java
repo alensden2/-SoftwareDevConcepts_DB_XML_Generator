@@ -1,3 +1,6 @@
+/**
+ * Data transfer object for product list
+ */
 package DTOs;
 
 public class OfficeListDTO {
@@ -7,7 +10,8 @@ public class OfficeListDTO {
     public String customerName;
     public String employeeCount;
 
-    public OfficeListDTO(String customerSalesValue, String territory, String city, String customerName, String employeeCount) {
+    public OfficeListDTO(String customerSalesValue, String territory, String city, String customerName,
+            String employeeCount) {
         this.customerSalesValue = customerSalesValue;
         this.territory = territory;
         this.city = city;

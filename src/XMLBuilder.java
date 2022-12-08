@@ -1,11 +1,10 @@
 /**
  * Software Development Concepts
- * 
+ *
  * @author Alen Santosh John
  * @author B00930528
- * 
- *     
  */
+
 import DTOs.CustomerInformationDTO;
 import DTOs.OfficeListDTO;
 import DTOs.ProductListDTO;
@@ -37,12 +36,16 @@ public class XMLBuilder {
     List<ProductListDTO> productListFromDB = new ArrayList<>();
     List<OfficeListDTO> officeListFromDB = new ArrayList<>();
 
-    void generateReports(String startDate, String endDate) {
+    void generateReports(String startDate, String endDate, String xmlName) {
+        /**
+         * reference from - https://examples.javacodegeeks.com/core-java/xml/parsers/documentbuilderfactory/create-xml-file-in-java-using-dom-parser-example/
+         * */
+
         customerListFromDB = customerData.customerList(startDate, endDate);
         productListFromDB = productList.productList(startDate, endDate);
-        officeListFromDB = officeList.officeList(startDate,endDate);
+        officeListFromDB = officeList.officeList(startDate, endDate);
 
-        final String xmlFilePath = "/home/cynos/IdeaProjects/assignment_5/alen/alen.xml";
+        final String xmlFilePath = "/home/cynos/IdeaProjects/assignment_5/alen/" + xmlName;
         ;
         try {
             DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
@@ -74,42 +77,13 @@ public class XMLBuilder {
             endTime.appendChild(document.createTextNode(endDate));
 
             Element customerList = document.createElement("customer_list");
-//            root.appendChild(customerList);
-            Element productList = document.createElement("product_list");
-//            root.appendChild(productList);
-            Element officeList = document.createElement("office_list");
-//            root.appendChild(officeList);
 
-
-            //you can also use staff.setAttribute("id", "1") for this
-            // firstname element
-            Element firstName = document.createElement("firstname");
-            firstName.appendChild(document.createTextNode("James"));
-            //employee.appendChild(firstName);
-
-            // lastname element
-            Element lastname = document.createElement("lastname");
-            lastname.appendChild(document.createTextNode("Harley"));
-            //employee.appendChild(lastname);
-
-            // create the xml file
-            //transform the DOM Object to an XML File
-
-            for(int i = 0; i<customerListFromDB.size(); i++){
+            for (int i = 0; i < customerListFromDB.size(); i++) {
                 Element customer = document.createElement("customer");
-//                customerList.appendChild(customer);
-
                 Element customerName = document.createElement("customer_name");
-
-
                 Element address = document.createElement("address");
-
-
                 Element orderValue = document.createElement("order_value");
-
-
                 Element outstandingBalance = document.createElement("outstanding_balance");
-
                 customerName.appendChild(document.createTextNode(customerListFromDB.get(i).customerName));
                 address.appendChild(document.createTextNode(customerListFromDB.get(i).address));
                 orderValue.appendChild(document.createTextNode(customerListFromDB.get(i).orderValue));
@@ -121,6 +95,24 @@ public class XMLBuilder {
                 customerList.appendChild(customer);
             }
             root.appendChild(customerList);
+            Element productList = document.createElement("product_list");
+
+            for(int i = 0; i<productListFromDB.size(); i++){
+                Element prdName = document.createElement("product_name");
+                Element prdLine = document.createElement("product_line_name");
+                Element introDate = document.createElement("introduction_date");
+                Element CustSales = document.createElement("customer_sales");
+                prdName.appendChild(document.createTextNode(productListFromDB.get(i).productName));
+                prdLine.appendChild(document.createTextNode(productListFromDB.get(i).productLine));
+                introDate.appendChild(document.createTextNode(productListFromDB.get(i).date));
+                CustSales.appendChild(document.createTextNode(productListFromDB.get(i).unitsSold));
+                productList.appendChild(prdName);
+                productList.appendChild(prdLine);
+                productList.appendChild(introDate);
+                productList.appendChild(CustSales);
+            }
+            Element officeList = document.createElement("office_list");
+            root.appendChild(officeList);
 
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = null;

@@ -4,25 +4,27 @@ import DTOs.ProductListDTO;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         XMLBuilder xmlBuilder = new XMLBuilder();
 
-        xmlBuilder.generateReports("'2003-02-12'", "'2003-12-19'");
 
-//        CustomerData customerData = new CustomerData();
-//        customerData.customerList("'2003-02-12'", "'2003-02-19'");
-//        List<CustomerInformationDTO> a = customerData.test();
-//    for(int i =0 ; i< a.size(); i++){
-//        System.out.println(a.get(i).customerName);
-//        System.out.println(a.get(i).orderValue);
-//        System.out.println(a.get(i).country);
-//        System.out.println(a.get(i).city);
-//        System.out.println(a.get(i).address);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Start date");
+        String startDate = sc.nextLine();
 
-//    }
+        System.out.println("Enter end date");
+        String endDate = sc.nextLine();
 
+        startDate = "\"" + startDate + "\"";
+        endDate = "\"" + endDate + "\"";
 
-}
+        System.out.println("Name of the XML");
+        String fileName = sc.nextLine();
+        xmlBuilder.generateReports(startDate, endDate, fileName);
+
+    }
 }

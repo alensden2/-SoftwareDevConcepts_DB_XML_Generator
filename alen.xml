@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<time_period_summary>
+    <year>
+        <start_date>'2003-02-12'</start_date>
+        <end_date>'2003-12-19'</end_date>
+    </year>
+    <customer_list>
+        <customer>
+            <outstanding_balance>29142.879999999997</outstanding_balance>
+            <order_value>14571.44</order_value>
+            <address>54, rue Royale</address>
+            <customer_name>Atelier graphique</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>65283.96000000001</outstanding_balance>
+            <order_value>32641.98</order_value>
+            <address>8489 Strong St.</address>
+            <customer_name>Signal Gift Stores</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>213716.44</outstanding_balance>
+            <order_value>53429.11</order_value>
+            <address>636 St Kilda RoadLevel 3</address>
+            <customer_name>Australian Collectors, Co.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>205349.94</outstanding_balance>
+            <order_value>1491.38</order_value>
+            <address>Erling Skakkes gate 78</address>
+            <customer_name>Baane Mini Imports</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>2684529.28</outstanding_balance>
+            <order_value>167783.08</order_value>
+            <address>5677 Strong St.</address>
+            <customer_name>Mini Gifts Distributors Ltd.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>114501.47</outstanding_balance>
+            <order_value>24101.81</order_value>
+            <address>Lyonerstr. 34</address>
+            <customer_name>Blauer See Auto, Co.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>80923.56</outstanding_balance>
+            <order_value>40461.78</order_value>
+            <address>5557 North Pendale Street</address>
+            <customer_name>Mini Wheels Co.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>66877.86</outstanding_balance>
+            <order_value>22292.62</order_value>
+            <address>897 Long Airport Avenue</address>
+            <customer_name>Land of Toys Inc.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>4786209.95</outstanding_balance>
+            <order_value>149633.95</order_value>
+            <address>C/ Moralzarzal, 86</address>
+            <customer_name>Euro+ Shopping Channel</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>23024.82</outstanding_balance>
+            <order_value>7674.94</order_value>
+            <address>Berguvsvägen 8</address>
+            <customer_name>Volvo Model Replicas, Co</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>79424.20000000001</outstanding_balance>
+            <order_value>39712.10</order_value>
+            <address>2, rue du Commerce</address>
+            <customer_name>Saveley &amp; Henriot, Co.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>71777.6</outstanding_balance>
+            <order_value>150123.15</order_value>
+            <address>Bronz Sok.Bronz Apt. 3/6 Tesvikiye</address>
+            <customer_name>Dragon Souveniers, Ltd.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>117730.51999999999</outstanding_balance>
+            <order_value>117634.88</order_value>
+            <address>4092 Furth CircleSuite 400</address>
+            <customer_name>Muscle Machine Inc</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>268256.33999999997</outstanding_balance>
+            <order_value>89418.78</order_value>
+            <address>9408 Furth Circle</address>
+            <customer_name>Technics Stores Inc.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>170048.91999999998</outstanding_balance>
+            <order_value>85024.46</order_value>
+            <address>Brehmen St. 121PR 334 Sentrum</address>
+            <customer_name>Herkku Gifts</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>42783.81</outstanding_balance>
+            <order_value>42783.81</order_value>
+            <address>184, chaussée de Tournai</address>
+            <customer_name>Daedalus Designs Imports</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>66766.28</outstanding_balance>
+            <order_value>33383.14</order_value>
+            <address>265, boulevard Charonne</address>
+            <customer_name>La Corne D'abondance, Co.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>49758.16</outstanding_balance>
+            <order_value>24879.08</order_value>
+            <address>25593 South Bay Ln.</address>
+            <customer_name>Gift Depot Inc.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>75204.95999999999</outstanding_balance>
+            <order_value>37602.48</order_value>
+            <address>Keskuskatu 45</address>
+            <customer_name>Toys of Finland, Co.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>96851.38</outstanding_balance>
+            <order_value>48425.69</order_value>
+            <address>Fauntleroy Circus</address>
+            <customer_name>AV Stores, Co.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>12073.920000000002</outstanding_balance>
+            <order_value>6036.96</order_value>
+            <address>16780 Pompton St.</address>
+            <customer_name>Auto-Moto Classics Inc.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>47816.479999999996</outstanding_balance>
+            <order_value>23908.24</order_value>
+            <address>12, Berkeley Gardens Blvd</address>
+            <customer_name>UK Collectables, Ltd.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>36527.61</outstanding_balance>
+            <order_value>36527.61</order_value>
+            <address>1900 Oak St.</address>
+            <customer_name>Canadian Gift Exchange Network</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>108445.40000000001</outstanding_balance>
+            <order_value>54222.70</order_value>
+            <address>78934 Hillside Dr.</address>
+            <customer_name>Toys4GrownUps.com</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>45480.79</outstanding_balance>
+            <order_value>45480.79</order_value>
+            <address>Bank of China Tower1 Garden Road</address>
+            <customer_name>King Kong Collectables, Co.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>87150.51999999999</outstanding_balance>
+            <order_value>43575.26</order_value>
+            <address>Rambla de Cataluña, 23</address>
+            <customer_name>Enaco Distributors</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>4465.85</outstanding_balance>
+            <order_value>4465.85</order_value>
+            <address>4097 Douglas Av.</address>
+            <customer_name>Boards &amp; Toys Co.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>36164.46</outstanding_balance>
+            <order_value>36164.46</order_value>
+            <address>Smagsloget 45</address>
+            <customer_name>Heintze Collectables</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>33819.67999999999</outstanding_balance>
+            <order_value>16909.84</order_value>
+            <address>43 rue St. Laurent</address>
+            <customer_name>Québec Home Shopping Network</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>96102.07999999999</outstanding_balance>
+            <order_value>48051.04</order_value>
+            <address>1 rue Alsace-Lorraine</address>
+            <customer_name>Alpha Cognac</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>46838.94</outstanding_balance>
+            <order_value>23419.47</order_value>
+            <address>27 rue du Colonel Pierre Avia</address>
+            <customer_name>Lyon Souveniers</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>27988.47</outstanding_balance>
+            <order_value>27988.47</order_value>
+            <address>Mehrheimerstr. 369</address>
+            <customer_name>Toms Spezialitäten, Ltd</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>240305.76</outstanding_balance>
+            <order_value>80101.92</order_value>
+            <address>201 Miller StreetLevel 15</address>
+            <customer_name>Anna's Decorations, Ltd</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>179751.19999999998</outstanding_balance>
+            <order_value>89875.60</order_value>
+            <address>Via Ludovico il Moro 22</address>
+            <customer_name>Rovelli Gifts</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>72040.56</outstanding_balance>
+            <order_value>24013.52</order_value>
+            <address>Monitor Money Building815 Pacific Hwy</address>
+            <customer_name>Souveniers And Things Co.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>36798.88</outstanding_balance>
+            <order_value>36798.88</order_value>
+            <address>Drammensveien 126APB 211 Sentrum</address>
+            <customer_name>Norway Gifts By Mail, Co.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>65446.079999999994</outstanding_balance>
+            <order_value>32723.04</order_value>
+            <address>Torikatu 38</address>
+            <customer_name>Oulu Toy Supplies, Inc.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>36092.4</outstanding_balance>
+            <order_value>36092.40</order_value>
+            <address>3758 North Pendale Street</address>
+            <customer_name>Mini Classics</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>187130.47999999998</outstanding_balance>
+            <order_value>93565.24</order_value>
+            <address>4575 Hillside Dr.</address>
+            <customer_name>Mini Creations Ltd.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>256677.36</outstanding_balance>
+            <order_value>85559.12</order_value>
+            <address>7734 Strong St.</address>
+            <customer_name>Corporate Gift Ideas Co.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>11520.0</outstanding_balance>
+            <order_value>2880.00</order_value>
+            <address>162-164 Grafton RoadLevel 2</address>
+            <customer_name>Down Under Souveniers, Inc</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>133769.82</outstanding_balance>
+            <order_value>66884.91</order_value>
+            <address>35 King George</address>
+            <customer_name>Stylish Desk Decors, Co.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>67515.70000000001</outstanding_balance>
+            <order_value>33757.85</order_value>
+            <address>31 Duncan St. West End</address>
+            <customer_name>Australian Gift Network, Co</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>59433.72</outstanding_balance>
+            <order_value>29716.86</order_value>
+            <address>Software Engineering CenterSEC Oy</address>
+            <customer_name>Suominen Souveniers</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>34606.28</outstanding_balance>
+            <order_value>34606.28</order_value>
+            <address>782 First Street</address>
+            <customer_name>Classic Gift Ideas, Inc</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>31428.21</outstanding_balance>
+            <order_value>31428.21</order_value>
+            <address>Merchants House27-30 Merchant's Quay</address>
+            <customer_name>CAF Imports</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>20452.5</outstanding_balance>
+            <order_value>20452.50</order_value>
+            <address>6047 Douglas Av.</address>
+            <customer_name>Men 'R' US Retailers, Ltd.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>101649.32</outstanding_balance>
+            <order_value>50824.66</order_value>
+            <address>12, rue des Bouchers</address>
+            <customer_name>Marseille Mini Autos</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>122482.92</outstanding_balance>
+            <order_value>30620.73</order_value>
+            <address>59 rue de l'Abbaye</address>
+            <customer_name>Reims Collectables</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>40440.08</outstanding_balance>
+            <order_value>20220.04</order_value>
+            <address>199 Great North Road</address>
+            <customer_name>GiftsForHim.com</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>141523.03</outstanding_balance>
+            <order_value>55425.77</order_value>
+            <address>2304 Long Airport Avenue</address>
+            <customer_name>Online Diecast Creations Co.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>65360.619999999995</outstanding_balance>
+            <order_value>32680.31</order_value>
+            <address>7825 Douglas Av.</address>
+            <customer_name>Collectables For Less Inc.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>8267.28</outstanding_balance>
+            <order_value>2755.76</order_value>
+            <address>Boulevard Tirou, 255</address>
+            <customer_name>Royale Belge</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>107478.99</outstanding_balance>
+            <order_value>35826.33</order_value>
+            <address>Geislweg 14</address>
+            <customer_name>Salzburg Collectables</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>143290.91999999998</outstanding_balance>
+            <order_value>71645.46</order_value>
+            <address>15 McCallum StreetNatWest Center #13-03</address>
+            <customer_name>Cruz &amp; Sons Co.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>77048.57999999999</outstanding_balance>
+            <order_value>38524.29</order_value>
+            <address>Strada Provinciale 124</address>
+            <customer_name>L'ordine Souveniers</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>87416.69999999998</outstanding_balance>
+            <order_value>43708.35</order_value>
+            <address>5905 Pompton St.Suite 750</address>
+            <customer_name>Classic Legends Inc.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>47327.299999999996</outstanding_balance>
+            <order_value>23663.65</order_value>
+            <address>2440 Pompton St.</address>
+            <customer_name>Gift Ideas Corp.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>44167.09</outstanding_balance>
+            <order_value>44167.09</order_value>
+            <address>Åkergatan 24</address>
+            <customer_name>Scandinavian Gift Ideas</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>84505.73999999999</outstanding_balance>
+            <order_value>42252.87</order_value>
+            <address>Kirchgasse 6</address>
+            <customer_name>Mini Auto Werke</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>38139.18</outstanding_balance>
+            <order_value>38139.18</order_value>
+            <address>567 North Pendale Street</address>
+            <customer_name>Super Scale Inc.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>114263.84000000001</outstanding_balance>
+            <order_value>57131.92</order_value>
+            <address>C/ Araquil, 67</address>
+            <customer_name>Corrida Auto Replicas, Ltd</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>19955.699999999997</outstanding_balance>
+            <order_value>9977.85</order_value>
+            <address>1785 First Street</address>
+            <customer_name>FunGiftIdeas.com</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>71011.26000000001</outstanding_balance>
+            <order_value>35505.63</order_value>
+            <address>7 Allen Street</address>
+            <customer_name>Australian Collectables, Ltd</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>17746.26</outstanding_balance>
+            <order_value>17746.26</order_value>
+            <address>20093 Cologno MonzeseAlessandro Volta 16</address>
+            <customer_name>Frau da Collezione</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>7678.25</outstanding_balance>
+            <order_value>7678.25</order_value>
+            <address>3675 Furth Circle</address>
+            <customer_name>West Coast Collectables Co.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>47513.19</outstanding_balance>
+            <order_value>47513.19</order_value>
+            <address>C/ Romero, 33</address>
+            <customer_name>Iberia Gift Imports, Corp.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>51666.28</outstanding_balance>
+            <order_value>25833.14</order_value>
+            <address>11328 Douglas Av.</address>
+            <customer_name>Motor Mint Distributors Inc.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>29997.09</outstanding_balance>
+            <order_value>29997.09</order_value>
+            <address>2793 Furth Circle</address>
+            <customer_name>Signal Collectibles Ltd.</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>22275.73</outstanding_balance>
+            <order_value>22275.73</order_value>
+            <address>120 Hanover Sq.</address>
+            <customer_name>Double Decker Gift Stores, Ltd</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>59265.14</outstanding_balance>
+            <order_value>59265.14</order_value>
+            <address>6251 Ingle Ln.</address>
+            <customer_name>Diecast Collectables</customer_name>
+        </customer>
+        <customer>
+            <outstanding_balance>73268.72</outstanding_balance>
+            <order_value>55041.04</order_value>
+            <address>Arenales 1938 3'A'</address>
+            <customer_name>Kelly's Gift Shop</customer_name>
+        </customer>
+    </customer_list>
+</time_period_summary>

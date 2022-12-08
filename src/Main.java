@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         XMLBuilder xmlBuilder = new XMLBuilder();
 
-        xmlBuilder.generateReports("'2003-02-12'", "'2003-02-19'");
+        xmlBuilder.generateReports("'2003-02-12'", "'2003-12-19'");
 
 //        CustomerData customerData = new CustomerData();
 //        customerData.customerList("'2003-02-12'", "'2003-02-19'");

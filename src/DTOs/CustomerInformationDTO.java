@@ -19,3 +19,4 @@ public class CustomerInformationDTO {
         this.outstandingBalance = outstandingBalance;
     }
 }
+

@@ -26,7 +26,6 @@ public class XMLBuilder {
         customerListFromDB = customerData.customerList(startDate, endDate);
         productListFromDB = productList.productList(startDate, endDate);
         officeListFromDB = officeList.officeList(startDate,endDate);
-        System.out.println("hdjm,s");
     }
 
 }

@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="982a1c4e-7d4d-4b65-b0af-f9442b19df04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DTOs/OfficeListDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_0_31.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_0_31.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CustomerData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OfficeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OfficeList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProductList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProductList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/XMLBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/XMLBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,31 +74,36 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/OfficeList.java</url>
-          <line>77</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/OfficeList.java</url>
-          <line>89</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ProductList.java</url>
-          <line>136</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ProductList.java</url>
-          <line>130</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/OfficeList.java</url>
           <line>105</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/CustomerData.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/CustomerData.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/CustomerData.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/CustomerData.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.util.ArrayList" memberName="size" />
+      </pinned-members>
+    </pin-to-top-manager>
     <watches-manager>
       <inline-watch fileUrl="file://$PROJECT_DIR$/src/ProductList.java" line="26">
         <watch expression="((ProductList)this).productNames" custom="ProductList" />

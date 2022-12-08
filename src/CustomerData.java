@@ -88,9 +88,18 @@ public class CustomerData {
                     address2 = "";
                 }
                 String streetAddress = address1 + address2;
+                /**
+                 * Getting the total amount paid till date (end date)
+                 */
+                String totalPaidAmt = getAmountPaidTillDate(endDate,customerName);
+                if(totalPaidAmt == null){
+                    totalPaidAmt = "0";
+                }
+                Double outstandingAmount = (Double.parseDouble(totalPaidAmt) - Double.parseDouble(orderValue));
+                outstandingAmount = Math.abs(outstandingAmount);
                 /* insert for total order outstanding */
                 CustomerInformationDTO customerInformationDTO = new CustomerInformationDTO(customerName, streetAddress,
-                        city, country, postalCode, orderValue, orderValue);
+                        city, country, postalCode, orderValue, outstandingAmount.toString());
                 customerListDTO.add(customerInformationDTO);
             }
 
@@ -134,6 +143,36 @@ public class CustomerData {
             System.out.println(e.getMessage());
         }
         return orderValueFromDB;
+    }
+
+    String getAmountPaidTillDate(String endDate, String custName) {
+        Connection connect = null;
+        Statement statement = null;
+        ResultSet orderValue = null;
+        String totalAmountPaidTillDate = null;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            connect = DriverManager.getConnection("jdbc:mysql://db.cs.dal.ca:3306?serverTimezone=UTC&useSSL=false",
+                    username, password);
+            statement = connect.createStatement();
+            statement.execute("use alen;");
+            /*
+             * Get the order value from the stored procedure
+             */
+            orderValue = statement.executeQuery("call `alen`.`GET_CUSTOMER_OUTSTANDING_BALANCE`("+endDate+"," + "\"" + custName + "\"" + ")");
+            while (orderValue.next()) {
+                totalAmountPaidTillDate = orderValue.getString("outstandingBalance");
+            }
+
+            orderValue.close();
+            statement.close();
+            connect.close();
+        } catch (Exception e) {
+            System.out.println("Connection failed");
+            System.out.println(e.getMessage());
+        }
+        return totalAmountPaidTillDate;
     }
 
     List<CustomerInformationDTO> test(){
